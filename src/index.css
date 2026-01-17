@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mental Health Platform Design System
+   Theme: Calm, Safe, Nurturing
+   Inspired by: Calm, Headspace, wellness apps
+*/
+
+@layer base {
+  :root {
+    /* Core palette - Warm, calming sage and lavender */
+    --background: 45 30% 98%;
+    --foreground: 220 25% 20%;
+
+    --card: 45 25% 99%;
+    --card-foreground: 220 25% 20%;
+
+    --popover: 45 25% 99%;
+    --popover-foreground: 220 25% 20%;
+
+    /* Primary - Sage green (calming, nature, growth) */
+    --primary: 150 25% 45%;
+    --primary-foreground: 45 30% 98%;
+
+    /* Secondary - Soft lavender (soothing, therapeutic) */
+    --secondary: 270 20% 94%;
+    --secondary-foreground: 270 30% 35%;
+
+    /* Muted - Cream tones */
+    --muted: 40 20% 94%;
+    --muted-foreground: 220 15% 50%;
+
+    /* Accent - Warm coral (warmth, comfort, hope) */
+    --accent: 15 70% 92%;
+    --accent-foreground: 15 60% 40%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 150 25% 45%;
+
+    --radius: 1rem;
+
+    /* Custom design tokens */
+    --gradient-calm: linear-gradient(135deg, hsl(150, 30%, 94%) 0%, hsl(270, 25%, 95%) 50%, hsl(40, 30%, 96%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(150, 25%, 96%) 0%, hsl(45, 30%, 98%) 100%);
+    --gradient-mood-happy: linear-gradient(135deg, hsl(45, 90%, 88%) 0%, hsl(35, 85%, 80%) 100%);
+    --gradient-mood-sad: linear-gradient(135deg, hsl(220, 45%, 88%) 0%, hsl(230, 40%, 82%) 100%);
+    --gradient-mood-anxious: linear-gradient(135deg, hsl(35, 70%, 88%) 0%, hsl(25, 65%, 82%) 100%);
+    --gradient-mood-angry: linear-gradient(135deg, hsl(0, 55%, 90%) 0%, hsl(10, 50%, 85%) 100%);
+    --gradient-mood-lonely: linear-gradient(135deg, hsl(280, 35%, 90%) 0%, hsl(290, 30%, 85%) 100%);
+    --gradient-mood-overwhelmed: linear-gradient(135deg, hsl(200, 40%, 88%) 0%, hsl(210, 35%, 82%) 100%);
+    --gradient-mood-neutral: linear-gradient(135deg, hsl(150, 20%, 92%) 0%, hsl(160, 15%, 88%) 100%);
+    
+    --shadow-soft: 0 4px 20px -4px hsl(220 25% 20% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(220 25% 20% / 0.1);
+    --shadow-elevated: 0 16px 50px -12px hsl(220 25% 20% / 0.15);
+    
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar - keeping for shadcn compatibility */
+    --sidebar-background: 45 25% 97%;
+    --sidebar-foreground: 220 25% 25%;
+    --sidebar-primary: 150 25% 45%;
+    --sidebar-primary-foreground: 45 30% 98%;
+    --sidebar-accent: 270 20% 94%;
+    --sidebar-accent-foreground: 270 30% 35%;
+    --sidebar-border: 40 15% 88%;
+    --sidebar-ring: 150 25% 45%;
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 45 20% 95%;
+
+    --card: 220 20% 13%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 220 20% 13%;
+    --popover-foreground: 45 20% 95%;
+
+    --primary: 150 30% 55%;
+    --primary-foreground: 220 25% 10%;
+
+    --secondary: 270 15% 20%;
+    --secondary-foreground: 270 20% 85%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 40 10% 65%;
+
+    --accent: 15 50% 25%;
+    --accent-foreground: 15 60% 85%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 150 30% 55%;
+
+    --gradient-calm: linear-gradient(135deg, hsl(220, 25%, 12%) 0%, hsl(270, 20%, 15%) 50%, hsl(220, 20%, 13%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220, 20%, 12%) 0%, hsl(220, 25%, 10%) 100%);
+
+    --sidebar-background: 220 20% 12%;
+    --sidebar-foreground: 45 15% 90%;
+    --sidebar-primary: 150 30% 55%;
+    --sidebar-primary-foreground: 220 25% 10%;
+    --sidebar-accent: 270 15% 20%;
+    --sidebar-accent-foreground: 270 20% 85%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 150 30% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar for a softer look */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+@layer utilities {
+  /* Breathing animation for grounding exercises */
+  @keyframes breathe {
+    0%, 100% { 
+      transform: scale(1); 
+      opacity: 0.7;
+    }
+    50% { 
+      transform: scale(1.15); 
+      opacity: 1;
+    }
+  }
+
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  @keyframes breathe-slow {
+    0%, 100% { 
+      transform: scale(1); 
+      opacity: 0.6;
+    }
+    50% { 
+      transform: scale(1.2); 
+      opacity: 1;
+    }
+  }
+
+  .animate-breathe-slow {
+    animation: breathe-slow 8s ease-in-out infinite;
+  }
+
+  /* Gentle pulse for mood cards */
+  @keyframes gentle-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 0 0 hsl(var(--primary) / 0.2);
+    }
+    50% { 
+      box-shadow: 0 0 0 8px hsl(var(--primary) / 0);
+    }
+  }
+
+  .animate-gentle-pulse {
+    animation: gentle-pulse 2s ease-in-out infinite;
+  }
+
+  /* Fade in animation */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+
+  /* Stagger children animations */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fade-in-up 0.4s ease-out forwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+  .stagger-children > *:nth-child(7) { animation-delay: 0.7s; }
+
+  /* Glass effect for cards */
+  .glass-card {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(270, 30%, 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Safe gradient background */
+  .bg-calm-gradient {
+    background: var(--gradient-calm);
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Mood gradients */
+  .bg-mood-happy { background: var(--gradient-mood-happy); }
+  .bg-mood-sad { background: var(--gradient-mood-sad); }
+  .bg-mood-anxious { background: var(--gradient-mood-anxious); }
+  .bg-mood-angry { background: var(--gradient-mood-angry); }
+  .bg-mood-lonely { background: var(--gradient-mood-lonely); }
+  .bg-mood-overwhelmed { background: var(--gradient-mood-overwhelmed); }
+  .bg-mood-neutral { background: var(--gradient-mood-neutral); }
+
+  /* Shadow utilities */
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+}
