@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Heart, Github, Twitter, Mail } from 'lucide-react';
+import { Heart, Github, Linkedin, Mail } from 'lucide-react';
 
 const footerLinks = [
   { name: 'Home', path: '/' },
@@ -9,9 +9,9 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { name: 'Twitter', icon: Twitter, href: '#' },
-  { name: 'GitHub', icon: Github, href: '#' },
-  { name: 'Email', icon: Mail, href: 'mailto:support@serenity.app' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/priyanshu-chourasiya-1b54ab253/' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/Priyanshu3369/' },
+  { name: 'Email', icon: Mail, href: 'mailto:priyanshuchaurasiya32198@gmail.com' },
 ];
 
 export function Footer() {
@@ -19,26 +19,27 @@ export function Footer() {
 
   return (
     <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                <Heart className="w-5 h-5 text-primary" />
-              </div>
-              <span className="text-xl font-bold text-foreground">Serenity</span>
-            </Link>
-            <p className="text-muted-foreground text-sm max-w-md">
-              Your safe space for mental wellness. Express your feelings, 
-              access grounding exercises, and receive compassionate support anytime.
-            </p>
-          </div>
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        {/* Brand */}
+        <div className="mb-6 md:mb-8">
+          <Link to="/" className="flex items-center gap-2 mb-3">
+            <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Heart className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+            </div>
+            <span className="text-lg md:text-xl font-bold text-foreground">Serenity</span>
+          </Link>
+          <p className="text-muted-foreground text-sm max-w-md">
+            Your safe space for mental wellness. Express your feelings, 
+            access grounding exercises, and receive compassionate support anytime.
+          </p>
+        </div>
 
+        {/* Links and Social - Compact on Mobile */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Quick Links</h4>
+            <ul className="space-y-1.5 md:space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.path}>
                   <Link
@@ -54,28 +55,30 @@ export function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Connect</h4>
-            <div className="flex gap-3">
+            <h4 className="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Connect</h4>
+            <div className="flex gap-2 md:gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 md:w-10 md:h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
+        {/* Bottom bar - More compact on mobile */}
+        <div className="border-t border-border pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+          <p className="text-muted-foreground text-xs md:text-sm">
             © {currentYear} Serenity. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
+          <div className="flex gap-4 md:gap-6 text-xs md:text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
           </div>
