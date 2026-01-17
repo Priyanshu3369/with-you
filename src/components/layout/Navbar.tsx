@@ -33,11 +33,39 @@ export function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-            <Heart className="w-5 h-5 text-primary" />
+            <svg
+              viewBox="0 0 200 200"
+              className="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="heartGradient" x1="0" y1="0" x2="200" y2="200">
+                  <stop offset="0%" stopColor="#00BFA5" />
+                  <stop offset="100%" stopColor="#26A69A" />
+                </linearGradient>
+              </defs>
+
+              <path
+                d="M100 180L85 165C45 125 25 105 25 75C25 50 45 30 70 30C85 30 95 40 100 50C105 40 115 30 130 30C155 30 175 50 175 75C175 105 155 125 115 165L100 180Z"
+                fill="url(#heartGradient)"
+              />
+
+              <path
+                d="M100 70C85 55 75 55 65 70C55 85 65 115 100 145C135 115 145 85 135 70C125 55 115 55 100 70Z"
+                fill="white"
+                opacity="0.2"
+              />
+
+              <path
+                d="M85 85C85 85 90 80 100 80C110 80 115 85 115 85"
+                stroke="white"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </svg>
           </div>
           <span className="text-xl font-bold text-foreground">Serenity</span>
         </Link>
-
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
@@ -112,7 +140,7 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            
+
             <div className="border-t border-border pt-3 mt-2">
               {user ? (
                 <Button

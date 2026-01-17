@@ -1,0 +1,12 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heartGradient" x1="0" y1="0" x2="200" y2="200">
+      <stop offset="0%" stop-color="#00BFA5" />
+      <stop offset="100%" stop-color="#26A69A" />
+    </linearGradient>
+  </defs>
+  <path d="M100 180L85 165C45 125 25 105 25 75C25 50 45 30 70 30C85 30 95 40 100 50C105 40 115 30 130 30C155 30 175 50 175 75C175 105 155 125 115 165L100 180Z" fill="url(#heartGradient)"/>
+  <path d="M100 70C85 55 75 55 65 70C55 85 65 115 100 145C135 115 145 85 135 70C125 55 115 55 100 70Z" fill="white" fill-opacity="0.2"/>
+  <path d="M85 85C85 85 90 80 100 80C110 80 115 85 115 85" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <text x="100" y="190" font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-size="16" font-weight="600" fill="#00695C" text-anchor="middle">WITH YOU</text>
+</svg>

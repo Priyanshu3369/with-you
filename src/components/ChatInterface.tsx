@@ -36,7 +36,7 @@ export function ChatInterface({ sessionId, userId, mood, initialMessages = [] }:
     if (messages.length === 0 && mood) {
       const moodMessages: Record<MoodType, string> = {
         happy: "I'm so glad you're feeling happy! 😊 What's bringing you joy today? I'd love to hear about it.",
-        sad: "I'm here with you. 💙 Feeling sad is okay—it's part of being human. Would you like to share what's on your mind?",
+        sad: "I'm here with you. 💙 Feeling sad is okay-it's part of being human. Would you like to share what's on your mind?",
         anxious: "Take a deep breath with me. 🌬️ Anxiety can feel overwhelming, but you're not alone. What's worrying you right now?",
         angry: "I hear you. 💚 Anger often tells us something important. Would you like to talk about what's frustrating you?",
         lonely: "I'm here, and you matter. 🤗 Loneliness can be really hard. What's been going on for you lately?",

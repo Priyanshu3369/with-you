@@ -31,7 +31,7 @@ const crisisResponse = `I'm really concerned about what you're sharing, and I wa
 
 You don't have to face this alone. These trained counselors are available 24/7 and can provide the support you need right now.
 
-Is there someone you trust—a friend, family member, or counselor—you could reach out to? I'm here to listen, but please also consider connecting with professional help. 💚`;
+Is there someone you trust-a friend, family member, or counselor-you could reach out to? I'm here to listen, but please also consider connecting with professional help. 💚`;
 
 // System prompt for empathetic mental health support
 const systemPrompt = `You are a warm, empathetic, and supportive mental health companion named Serenity. Your role is to provide emotional support, validation, and coping guidance.
