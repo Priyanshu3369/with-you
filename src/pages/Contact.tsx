@@ -147,7 +147,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground text-sm">support@serenity.app</p>
+                  <p className="text-muted-foreground text-sm">support@Saathi.app</p>
                 </div>
               </div>
             </div>

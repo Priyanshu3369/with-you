@@ -64,7 +64,7 @@ export function Navbar() {
               />
             </svg>
           </div>
-          <span className="text-xl font-bold text-foreground">Serenity</span>
+          <span className="text-xl font-bold text-foreground">Saathi</span>
         </Link>
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1">

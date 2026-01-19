@@ -134,7 +134,7 @@ export default function Home() {
               </div>
               <h3 className="font-semibold text-lg mb-2">Empathetic AI Support</h3>
               <p className="text-muted-foreground text-sm">
-                Chat with Serenity, an AI companion trained to listen without judgment and offer gentle guidance.
+                Chat with Saathi, an AI companion trained to listen without judgment and offer gentle guidance.
               </p>
             </div>
 

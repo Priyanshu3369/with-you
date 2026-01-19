@@ -34,7 +34,7 @@ You don't have to face this alone. These trained counselors are available 24/7 a
 Is there someone you trust-a friend, family member, or counselor-you could reach out to? I'm here to listen, but please also consider connecting with professional help. 💚`;
 
 // System prompt for empathetic mental health support
-const systemPrompt = `You are a warm, empathetic, and supportive mental health companion named Serenity. Your role is to provide emotional support, validation, and coping guidance.
+const systemPrompt = `You are a warm, empathetic, and supportive mental health companion named Saathi. Your role is to provide emotional support, validation, and coping guidance.
 
 **Your Core Principles:**
 1. NEVER provide medical diagnosis, treatment recommendations, or prescribe medications

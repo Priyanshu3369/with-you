@@ -187,7 +187,7 @@ export function ChatInterface({ sessionId, userId, mood, initialMessages = [] }:
                 {message.role === 'assistant' && (
                   <div className="flex items-center gap-2 mb-2 text-xs text-muted-foreground">
                     <Heart className="w-3 h-3 text-primary" />
-                    <span>Serenity</span>
+                    <span>Saathi</span>
                   </div>
                 )}
                 <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
@@ -203,7 +203,7 @@ export function ChatInterface({ sessionId, userId, mood, initialMessages = [] }:
               <div className="bg-card rounded-2xl rounded-bl-md px-4 py-3 shadow-soft">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  <span className="text-sm">Serenity is typing...</span>
+                  <span className="text-sm">Saathi is typing...</span>
                 </div>
               </div>
             </div>
@@ -241,7 +241,7 @@ export function ChatInterface({ sessionId, userId, mood, initialMessages = [] }:
             </Button>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-3">
-            Serenity provides emotional support only, not medical advice. In crisis? Call <strong>988</strong> (US)
+            Saathi provides emotional support only, not medical advice. In crisis? Call <strong>988</strong> (US)
           </p>
         </div>
       </div>

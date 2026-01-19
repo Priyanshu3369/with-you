@@ -32,7 +32,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
             <Heart className="w-4 h-4" />
-            About Serenity
+            About Saathi
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -41,7 +41,7 @@ export default function About() {
           </h1>
           
           <p className="text-lg text-muted-foreground">
-            Serenity was created with one mission: to provide a safe, accessible space 
+            Saathi was created with one mission: to provide a safe, accessible space 
             for everyone to express their feelings and find support during challenging moments.
           </p>
         </div>
@@ -54,10 +54,10 @@ export default function About() {
               <h2 className="text-2xl font-bold">Our Mission</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              We believe everyone deserves access to mental health support. Serenity combines 
+              We believe everyone deserves access to mental health support. Saathi combines 
               the power of AI with evidence-based techniques to provide compassionate, 
               judgment-free support whenever you need it. Whether you're feeling anxious, 
-              overwhelmed, or just need someone to listen, Serenity is here for you.
+              overwhelmed, or just need someone to listen, Saathi is here for you.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto mt-20">
           <div className="bg-secondary/50 rounded-2xl p-6 text-center">
             <p className="text-sm text-muted-foreground">
-              <strong>Important:</strong> Serenity is not a substitute for professional mental health care. 
+              <strong>Important:</strong> Saathi is not a substitute for professional mental health care. 
               If you're experiencing a crisis, please reach out to a mental health professional 
               or call your local emergency services.
             </p>

@@ -27,7 +27,7 @@ export function Footer() {
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
               </div>
-              <span className="text-lg sm:text-2xl font-bold text-foreground">Serenity</span>
+              <span className="text-lg sm:text-2xl font-bold text-foreground">Saathi</span>
             </Link>
             <p className="text-muted-foreground text-xs sm:text-base leading-relaxed max-w-sm">
               Your safe space for mental wellness and compassionate support.
@@ -75,7 +75,7 @@ export function Footer() {
         <div className="border-t border-border pt-4 sm:pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-6">
             <p className="text-muted-foreground text-xs sm:text-sm text-center sm:text-left">
-              © {currentYear} Serenity
+              © {currentYear} Saathi
             </p>
             <div className="flex gap-3 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">
