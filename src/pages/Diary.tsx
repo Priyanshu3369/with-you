@@ -220,7 +220,7 @@ export default function Diary() {
   const handleLock = () => {
     setIsUnlocked(false);
     setEntries([]);
-    setPasswordDialogOpen(true);
+    navigate('/');
   };
 
   const handleSaveEntry = async () => {
