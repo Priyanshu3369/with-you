@@ -5,7 +5,6 @@ const footerLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Diary', path: '/diary' },
-  { name: 'Contact', path: '/contact' },
 ];
 
 const socialLinks = [
@@ -23,11 +22,40 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 mb-6 sm:mb-8 lg:mb-12">
           {/* Brand Section - Spans full width on mobile */}
           <div className="col-span-2 lg:col-span-5">
-            <Link to="/" className="inline-flex items-center gap-2 mb-2 sm:mb-4 group">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+            <Link to="/" className="flex items-center gap-2 group">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <svg
+                  viewBox="0 0 200 200"
+                  className="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="heartGradient" x1="0" y1="0" x2="200" y2="200">
+                      <stop offset="0%" stopColor="#00BFA5" />
+                      <stop offset="100%" stopColor="#26A69A" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    d="M100 180L85 165C45 125 25 105 25 75C25 50 45 30 70 30C85 30 95 40 100 50C105 40 115 30 130 30C155 30 175 50 175 75C175 105 155 125 115 165L100 180Z"
+                    fill="url(#heartGradient)"
+                  />
+
+                  <path
+                    d="M100 70C85 55 75 55 65 70C55 85 65 115 100 145C135 115 145 85 135 70C125 55 115 55 100 70Z"
+                    fill="white"
+                    opacity="0.2"
+                  />
+
+                  <path
+                    d="M85 85C85 85 90 80 100 80C110 80 115 85 115 85"
+                    stroke="white"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
               </div>
-              <span className="text-lg sm:text-2xl font-bold text-foreground">Saathi</span>
+              <span className="text-xl font-bold text-foreground">Saathi</span>
             </Link>
             <p className="text-muted-foreground text-xs sm:text-base leading-relaxed max-w-sm">
               Your safe space for mental wellness and compassionate support.
